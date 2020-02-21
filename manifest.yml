@@ -1,0 +1,14 @@
+---
+applications:
+- name: tfsagent
+  command: ./start.sh
+  no-route: true
+  health-check-type: process
+  buildpacks:
+  - https://github.com/cloudfoundry/apt-buildpack/releases/download/v0.2.2/apt-buildpack-cflinuxfs3-v0.2.2.zip
+  - binary_buildpack
+  env:
+    AZP_URL: https://dev.azure.com/<ORG_NAME>
+    AZP_TOKEN: <PAC_TOKEN>
+    AZP_POOL: Default
+    AZP_WORK: _work
