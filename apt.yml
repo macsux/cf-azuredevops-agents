@@ -1,5 +1,0 @@
----
-repos: 
-- deb https://packages.cloudfoundry.org/debian stable main
-packages:
-- cf-cli
